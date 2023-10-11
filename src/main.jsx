@@ -15,8 +15,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
       <Route element={ <Layout/> } >
-        <Route path="/" element={ <Home/> } />  
-        <Route path="/Moon" element={<Moon />}/>
+        <Route path="/" element={ <Home/> } /> 
+        <Route path="/Destination" element={<Destination />}/> 
+        {/* <Route path="/Moon" element={<Moon />}/> */}
         <Route path="/Mars" element={<Mars />}/>
         <Route path="/Titan" element={<Titan />}/>
         <Route path="/Europa" element={<Europa />}/>
