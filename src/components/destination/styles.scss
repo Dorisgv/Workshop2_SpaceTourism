@@ -1,0 +1,217 @@
+$breakpoints:(
+
+  "sm": 375px
+  );
+
+@mixin sm {
+  @media (min-width: map-get($breakpoints, "sm")) {
+    @content;
+  }
+}
+
+.containerDestination{
+  background-image: url("./Images/Fondo.jpg");
+  display: flex;
+  background-size: contain;
+  height: auto;
+  justify-content: space-evenly;
+  align-items: center;
+  
+  
+  
+  &__left{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    flex-direction: column;
+    font-family: Barlow Condensed;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 4.72px;
+    color: #ffffff;
+    
+    
+    strong{
+      color: gray;
+    }
+    
+    img{
+      width: 445px;
+      height: 445px;
+      margin-top: 40px;
+      
+    }
+  }
+  &__right{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    // width: 40%;
+    height: 492px;
+    margin-top: 200px;
+    // top: 310px;
+    // left: 832px;
+    color: #ffffff;
+    // margin-top: 150px;
+    
+
+    nav{
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+      gap:  2.5em;
+      
+      .links:hover {
+        text-decoration: underline; /* Agrega un subrayado cuando el mouse está sobre el enlace */
+        
+      }
+      
+    }
+    h1{
+      font-family: Bellefair;
+      font-size: 100px;
+      font-weight: 400;
+      line-height: 115px;
+      letter-spacing: 0px;
+      text-align: left;
+    }
+    p{
+      width: 80%;
+      font-family: Barlow;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0px;
+      text-align: justify;
+      color: #D0D6F9;
+
+    }
+    &--text{
+      width: 60%;
+      display: flex;
+      justify-content: space-between;
+      font-family: Barlow Condensed;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 17px;
+      letter-spacing: 2.362499952316284px;
+      text-align: left;
+      color: #D0D6F9;
+      margin-top: 30px;
+      h3{
+        font-family: Bellefair;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0px;
+        text-align: left;
+        color: #ffffff;
+
+      }
+    }
+    
+}
+
+
+}
+.links{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.linea{
+  width: 444px;
+  height: 1px;
+  margin-top: 30px;
+  left: 1px;
+  background-color: #383B4B;
+}
+
+.nabvar{
+  // width: 1%;
+}
+
+.containNavbar{
+  width: 100%;
+  display: flex;
+  position: absolute;
+  margin-top: 30px;
+  align-items: center;
+  &__logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+  }
+  &__lineaNav{
+    width: 480px;
+    height: 1px;
+    background-color: #ffffff;
+    margin-left: 60px;
+  }
+  &__bootstrap{
+    width: 60%;
+    height: 90px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.7742px);
+    color: #ffffff;
+    padding-left: 30px;
+
+    &--links{
+      display: flex;
+      gap: 30px;
+      margin-left: 80px;
+      font-family: Barlow Condensed;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19.2px;
+      letter-spacing: 2.7px;
+      
+    }
+    
+  }
+  
+}
+
+@media screen and (max-width: 375px) {
+  .containerDestination {
+    flex-direction: column; /* Cambia la dirección del contenedor a columna */
+    align-items: center; /* Centra los elementos en el eje horizontal */
+  }
+
+  .containerDestination__left {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin-top: 20px; /* Reduce el margen superior */
+    text-align: center; /* Centra el texto en el eje horizontal */
+    font-size: 20px; /* Reduce el tamaño de fuente */
+    img {
+      width: 80%; /* Reduce el tamaño de la imagen */
+      margin-top: 20px; /* Espaciado superior para la imagen */
+    }
+  }
+
+  .containerDestination__right {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin-top: 20px; /* Reduce el margen superior */
+    nav {
+      width: 100%; /* Ocupa todo el ancho disponible */
+      justify-content: center; /* Centra los elementos de navegación */
+      .links {
+        margin-right: 15px; /* Espaciado entre enlaces */
+        &:last-child {
+          margin-right: 0; /* Elimina el espaciado derecho del último enlace */
+        }
+      }
+    }
+    h1 {
+      font-size: 40px; /* Reduce el tamaño de fuente del título */
+    }
+    p {
+      font-size: 14px; /* Reduce el tamaño de fuente del párrafo */
+    }
+  }
+}
+
