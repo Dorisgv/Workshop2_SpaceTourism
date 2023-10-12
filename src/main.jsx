@@ -7,7 +7,6 @@ import Mars from './components/destination/Mars';
 import Titan from './components/destination/Titan';
 import Europa from './components/destination/Europa';
 import Moon from './components/destination/Moon';
-import Technology from './components/technology/Technology';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Layout from './components/home/Layout';
 import CrewP from './components/crew/CrewP';
