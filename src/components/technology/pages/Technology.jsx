@@ -1,9 +1,8 @@
-import React, { useEffect, useEffect, useState } from "react";
-import data from "../../data/data.json";
+import React, { useEffect, useState } from "react";
+import data from "src/data/data.json";
 
-import React from 'react'
 
-const TechnologySlider = () => {
+const Technology = () => {
 
     const [techData, setTechData] = useState({
         name: data.technology[0].name,
@@ -36,7 +35,7 @@ const TechnologySlider = () => {
         };
     }, [techData]);
 
-    return(
+    return (
         <section className="container-technology">
             <div className="technology-title">
                 <span>03</span>
@@ -46,14 +45,14 @@ const TechnologySlider = () => {
                 <div className="technology-left-image">
                     <img src={techData.imageDesktop} className="technology-landscape" alt={techData.name} />
                     <div className="technology-left-circles">
-                        {data.technology.map((item) =>{
-                            return(
-                                <div className="technology-circle" 
-                                key={item.id}
-                                id={`circle-${item.id}`}
-                                onClick={() => handleClick(item)}
+                        {data.technology.map((item) => {
+                            return (
+                                <div className="technology-circle"
+                                    key={item.id}
+                                    id={`circle-${item.id}`}
+                                    onClick={() => handleClick(item)}
                                 >
-                                <span>{item.id}</span>    
+                                    <span>{item.id}</span>
                                 </div>
                             );
                         })}
@@ -72,4 +71,4 @@ const TechnologySlider = () => {
     );
 };
 
-export default TechnologySlider; 
+export default Technology; 

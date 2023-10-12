@@ -9,9 +9,8 @@ const Technology = () => {
         <p>Space Launch 101</p>
       </div>
       <div className="technology-wrapper">
-        <div className="technology-left-image">
-          <img src='src/components/technology/images/image-launch-vehicle-portrait.jpg' className='landspace' />
-
+        <div className="technology-left">
+        <img src="src/components/technology/images/image-launch-vehicle-landscape.jpg" className="technology-landscape" alt="name" />
           <div className="tecnology-left-circles">
             <div className="technology-circle">
               <span>1</span>
@@ -38,7 +37,7 @@ const Technology = () => {
 
         </div>
         <div className="technology-right-content">
-          <img src="src/components/technology/images/image-launch-vehicle-portrait.jpg" />
+          <img src="src/components/technology/images/image-launch-vehicle-portrait.jpg" alt="name-1" />
         </div>
       </div>
     </section>

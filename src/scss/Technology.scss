@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Bellefair&display=swap");
+
+
 .container-technology{
   background-image: url("/src/components/technology/images/background-technology-desktop.jpg");
 }
@@ -8,4 +11,117 @@
   left: 10%;
   width: 40%;
   display: flex;
+}
+
+.technology-title span {
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: green;
+  letter-spacing: 4px;
+  opacity: 0.25;
+  margin-right: 2%;
+}
+
+.technology-title p{
+  font-weight: 400;
+  font-size: 2.8rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: whitesmoke;
+}
+
+.technology-wrapper{
+
+  top: 29%;
+  left: 10%;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.technology-left-circles{
+  display: flex;
+  flex-direction: column;
+}
+
+.technology-circle{
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+}
+
+.technology-circle:not(:last-child) {
+  margin-bottom: 5%;
+}
+
+.technology-circle:hover {
+  border: 1px solid #ffff;
+}
+
+.technology-circle span{
+  font-family: "Bellefair",serif;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+}
+
+.technology-circle.active{
+  background-color: #fff;
+}
+
+.technology-circle.active span{
+  color: #0b0d17;
+}
+
+.technology-center-content{
+  margin-left: 10%;
+}
+
+.technology-center-title{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  color: #d0d6f9;
+  margin-bottom: 2%;
+}
+
+.technology-center-content h1{
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffff;
+  font-size: 5rem;
+}
+
+.technology-center-description{
+
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  text-transform: none;
+  color: #d0d6f9;
+  margin-top: 5%;
+  width: 90%;
+}
+
+.technology-right-content{
+  flex: 0 1 50%;
+}
+
+.technology-right-content img{
+  display: block;
+  width: 80%;
+  height: 50rem;
+  margin-left: auto;
+}
+
+.technology-landscape{
+  display: none;
 }
