@@ -1,11 +1,12 @@
 import React from 'react'
 import "./styles.scss"
+import Moon from "./Moon"
 
 
 const Destination = () => {
   return (
     <div>
-      Moon
+      <Moon />
     </div>
   )
 }

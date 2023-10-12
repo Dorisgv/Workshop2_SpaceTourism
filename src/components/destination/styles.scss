@@ -1,13 +1,13 @@
-$breakpoints:(
+// $breakpoints:(
 
-  "sm": 375px
-  );
+//   "sm": 375px
+//   );
 
-@mixin sm {
-  @media (min-width: map-get($breakpoints, "sm")) {
-    @content;
-  }
-}
+// @mixin sm {
+//   @media (min-width: map-get($breakpoints, "sm")) {
+//     @content;
+//   }
+// }
 
 .containerDestination{
   background-image: url("./Images/Fondo.jpg");
@@ -130,9 +130,6 @@ $breakpoints:(
   background-color: #383B4B;
 }
 
-.nabvar{
-  // width: 1%;
-}
 
 .containNavbar{
   width: 100%;
@@ -175,43 +172,84 @@ $breakpoints:(
   }
   
 }
+.hamburguer{
+  display: none;
+}
 
 @media screen and (max-width: 375px) {
   .containerDestination {
-    flex-direction: column; /* Cambia la dirección del contenedor a columna */
-    align-items: center; /* Centra los elementos en el eje horizontal */
-  }
-
-  .containerDestination__left {
-    width: 100%; /* Ocupa todo el ancho disponible */
-    margin-top: 20px; /* Reduce el margen superior */
-    text-align: center; /* Centra el texto en el eje horizontal */
-    font-size: 20px; /* Reduce el tamaño de fuente */
-    img {
-      width: 80%; /* Reduce el tamaño de la imagen */
-      margin-top: 20px; /* Espaciado superior para la imagen */
-    }
-  }
-
-  .containerDestination__right {
-    width: 100%; /* Ocupa todo el ancho disponible */
-    margin-top: 20px; /* Reduce el margen superior */
-    nav {
-      width: 100%; /* Ocupa todo el ancho disponible */
-      justify-content: center; /* Centra los elementos de navegación */
-      .links {
-        margin-right: 15px; /* Espaciado entre enlaces */
-        &:last-child {
-          margin-right: 0; /* Elimina el espaciado derecho del último enlace */
+    // width: 100%;
+    background-color: blue; 
+    height: auto; 
+    background-size: cover; 
+    flex-direction: column; 
+    // display: flex;
+    &__right {
+      
+      width: 50%; 
+      margin-top: 20px; 
+      text-align: center;
+      
+      font-size: 0.5rem;
+      // padding: 10%;
+      h1 {
+        font-size: 2.4rem;
+        text-align: center;
+      }
+      nav{
+        align-items: center;
+        margin-left: 30px;
+        
+        .links:hover {
+          text-decoration: underline; /* Agrega un subrayado cuando el mouse está sobre el enlace */
+          
         }
+        
       }
     }
-    h1 {
-      font-size: 40px; /* Reduce el tamaño de fuente del título */
-    }
-    p {
-      font-size: 14px; /* Reduce el tamaño de fuente del párrafo */
+    &__left{
+      width: 50%;
+      margin-top: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+     
+      img{
+        width: 170px; 
+        height: 170px; 
+        margin-top: 20px; 
+        }
+        span {
+          font-size: 0.5rem;
+          
+          
+        }
     }
   }
+  .containNavbar{
+    display: none;
+    
+      
+    }
+    .hamburguer{
+      width: 50%;
+      // background-color: rgb(170, 70, 70);
+      display: none;
+      position: absolute;
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      padding: 30px;
+    }
+    .containNavbar__logo{
+      width: 30px;
+      height: 30px;
+      img{
+        width: 30px;
+        height: 30px;
+      }
+    }
 }
 
